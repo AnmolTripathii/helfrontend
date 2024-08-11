@@ -10,6 +10,7 @@ function UserTable({ title, users, userRole }) {
             });
 
             console.log("User deleted successfully:", response.data.message);
+            window.location.reload();
         } catch (err) {
             console.error("Failed to delete user:", err.response?.data?.message || err.message);
         }
